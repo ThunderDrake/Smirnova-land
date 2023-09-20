@@ -2,11 +2,17 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
+  --font-jost: "Jost", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --content-width: 1570px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-
-  // colors
-  --light-color: #fff;
 }
+
+// Colors
+$color-main-bg: #05031c;
+$color-white: #fff;
+$color-black: #000;
+$color-accent: #c6d02c;
+$color-accent-light: #faffa9;
