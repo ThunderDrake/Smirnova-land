@@ -1,0 +1,46 @@
+.hero {
+  padding-top: var(--header-height);
+  background-image: url("../img/hero-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    position: relative;
+  }
+
+  &__person {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  &__content {
+    padding-top: 100px;
+    padding-bottom: 205px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: var(--font-jost);
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: $color-white;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 42px;
+    font-family: var(--font-jost);
+    font-size: 38px;
+    line-height: 120%;
+    color: $color-white;
+  }
+}

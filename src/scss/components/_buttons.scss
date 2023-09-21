@@ -1,0 +1,24 @@
+.button-main {
+  display: flex;
+  align-items: center;
+  border-radius: 90px;
+  padding: 26px 46px;
+  font-family: var(--font-jost);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 115%;
+  letter-spacing: 0.8px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #06031d;
+  background-color: $color-accent;
+  transition: background-color 0.3s ease;
+
+  svg {
+    margin-left: 8px;
+  }
+
+  @include hover {
+    background-color: $color-accent-light;
+  }
+}
