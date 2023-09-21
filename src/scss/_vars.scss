@@ -6,12 +6,14 @@
   --font-raleway: "Raleway", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
   --content-width: 1570px;
+  --content-fluid-width: 1775px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container--fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
 }
 
 // Colors
-$color-main-bg: #05031c;
+$color-main-bg: #0d083f;
 $color-white: #fff;
 $color-black: #000;
 $color-accent: #c6d02c;

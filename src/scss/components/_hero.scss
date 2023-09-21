@@ -1,24 +1,27 @@
 .hero {
+  position: relative;
   padding-top: var(--header-height);
   background-image: url("../img/hero-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 
   &__container {
-    position: relative;
   }
 
   &__person {
     position: absolute;
-    left: 0;
+    left: 50%;
     right: 0;
     bottom: 0;
+    width: 100%;
+    max-width: 1920px;
+    transform: translateX(-50%);
     pointer-events: none;
   }
 
   &__content {
     padding-top: 100px;
-    padding-bottom: 205px;
+    padding-bottom: 345px;
   }
 
   &__title {

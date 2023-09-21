@@ -1,0 +1,62 @@
+.review-cards {
+  margin-bottom: 180px;
+  padding-top: 60px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+  }
+}
+
+.review-item {
+  position: relative;
+  outline: 2px dashed #c6d02c;
+  outline-offset: -10px;
+  border-radius: 25px;
+  padding: 50px 40px 50px 265px;
+  background: #fff;
+
+  &__image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 272px;
+    height: 325px;
+    object-fit: contain;
+    object-position: left;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    font-family: var(--font-jost);
+    font-size: 22px;
+    line-height: 110%;
+    letter-spacing: 0.88px;
+    color: #080627;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-family: var(--font-jost);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 110%;
+    letter-spacing: 0.695px;
+    color: #080627;
+  }
+
+  &__link {
+    font-family: var(--font-jost);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px; /* 138.249% */
+    letter-spacing: 0.694px;
+    color: #c6d02c;
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: $color-main-bg;
+    }
+  }
+}
