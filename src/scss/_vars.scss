@@ -9,7 +9,13 @@
   --content-fluid-width: 1775px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-  --container--fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+  --swiper-pagination-bullet-inactive-color: #ececec;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-color: #c6d02c;
+  --swiper-pagination-bullet-width: 15px;
+  --swiper-pagination-bullet-height: 15px;
+  --swiper-pagination-bullet-horizontal-gap: 19px;
 }
 
 // Colors

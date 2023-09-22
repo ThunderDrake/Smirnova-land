@@ -131,3 +131,10 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+.bg-wrapper--first {
+  background-image: url("../img/first-bg-image.png");
+  background-position: top 220px center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

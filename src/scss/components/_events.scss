@@ -1,0 +1,144 @@
+.events {
+  margin-bottom: 135px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1em;
+    font-family: var(--font-jost);
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 130%;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  &__slider {
+    max-width: 1570px;
+
+    .swiper-pagination {
+
+    }
+
+    &-wrapper {
+      position: relative;
+      padding-bottom: 55px;
+    }
+
+    &-button {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      cursor: pointer;
+
+      &--prev {
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &--next {
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.event {
+  position: relative;
+  outline: 2px dashed #c6d02c;
+  outline-offset: -10px;
+  border-radius: 25px;
+  padding: 38px 54px;
+
+  &__content {
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-family: var(--font-jost);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: #000;
+  }
+
+  &__date {
+    margin-bottom: 15px;
+    font-family: var(--font-jost);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: #c6cf2c;
+  }
+
+  &__descr {
+    margin-bottom: 260px;
+    font-family: var(--font-jost);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: 0.64px;
+    color: #000;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    padding-bottom: 10px;
+    width: max-content;
+    font-family: var(--font-jost);
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.64px;
+    color: #fff;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-bottom: 2px dotted #fff;
+      width: 100%;
+      height: 1px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    svg {
+      margin-left: 10px;
+      fill: currentcolor;
+    }
+
+    @include hover {
+      color: $color-accent-light;
+
+      &::after {
+        border-color: $color-accent-light;
+      }
+    }
+  }
+}
