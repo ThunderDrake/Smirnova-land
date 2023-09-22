@@ -1,0 +1,68 @@
+.systems {
+  padding-bottom: 200px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1em;
+    font-family: var(--font-jost);
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 130%;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+}
+
+.system-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 110px 50px 390px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin-bottom: 15px;
+    font-family: var(--font-jost);
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 115%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #090629;
+  }
+
+  &__text {
+    font-family: var(--font-jost);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 145%;
+    text-align: center;
+    color: #090629;
+  }
+
+  &:nth-child(1) {
+    background-image: url("../img/system-card-1.png");
+  }
+
+  &:nth-child(2) {
+    background-image: url("../img/system-card-2.png");
+  }
+
+  &:nth-child(3) {
+    background-image: url("../img/system-card-3.png");
+  }
+}
