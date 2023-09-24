@@ -6,7 +6,7 @@ if(videoButtons.length >= 1 ) {
       const src = e.target.dataset.src;
 
       e.target.closest('[data-video-wrapper]').querySelector('iframe').src = src;
-      e.target.closest('[data-video-wrapper]').querySelector('.what-says__video-decor').classList.add('d-none');
+      e.target.closest('[data-video-wrapper]').querySelector('[data-video-decor]').classList.add('d-none');
     });
   });
 }
