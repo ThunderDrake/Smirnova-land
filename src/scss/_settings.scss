@@ -144,3 +144,13 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgb(198 208 44 / 90%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgb(198 208 44 / 0%);
+  }
+}
