@@ -2,6 +2,8 @@
 
 @mixin custom-checkbox {
   position: relative;
+  display: flex;
+  align-items: center;
 
   &__field {
     appearance: none;
@@ -9,17 +11,25 @@
   }
 
   &__content {
-    padding-left: 25px;
+    padding-left: 42px;
     cursor: pointer;
+    color: #fff;
+    font-family: var(--font-jost);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px; /* 135.714% */
+    letter-spacing: 0.42px;
 
     &::before {
       content: "";
       position: absolute;
       left: 0;
       top: 0;
-      border: 1px solid #000;
-      width: 15px;
-      height: 15px;
+      width: 20px;
+      height: 20px;
+      background-color: $color-accent;
+      border-radius: 5px;
       box-sizing: border-box;
     }
 
@@ -28,15 +38,23 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: 15px;
-      height: 15px;
+      width: 20px;
+      height: 20px;
       box-sizing: border-box;
-      background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='fi_32282' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='405.272px' height='405.272px' viewBox='0 0 405.272 405.272' style='enable-background:new 0 0 405.272 405.272;' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M393.401,124.425L179.603,338.208c-15.832,15.835-41.514,15.835-57.361,0L11.878,227.836 c-15.838-15.835-15.838-41.52,0-57.358c15.841-15.841,41.521-15.841,57.355-0.006l81.698,81.699L336.037,67.064 c15.841-15.841,41.523-15.829,57.358,0C409.23,82.902,409.23,108.578,393.401,124.425z'%3E%3C/path%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Crect width='20' height='20' rx='5' fill='%23C6D02C'/%3E%3Cpath d='M13.8574 7.82946L13.1525 7.13953C13.0574 7.04651 12.9386 7 12.804 7C12.6693 7 12.5505 7.04651 12.4554 7.13953L9.06535 10.4574L7.55248 8.96899C7.45743 8.87597 7.33861 8.82946 7.20396 8.82946C7.06931 8.82946 6.9505 8.87597 6.85545 8.96899L6.1505 9.65891C6.04752 9.75194 6 9.86822 6 10C6 10.1318 6.04752 10.2481 6.14257 10.3411L8.01188 12.1705L8.71683 12.8605C8.81188 12.9535 8.93069 13 9.06535 13C9.2 13 9.31881 12.9535 9.41386 12.8605L10.1188 12.1705L13.8574 8.51163C13.9525 8.4186 14 8.30233 14 8.17054C14 8.03876 13.9525 7.92248 13.8574 7.82946Z' fill='white'/%3E%3C/svg%3E");
       background-position: center;
-      background-size: 10px 10px;
+      background-size: 20px 20px;
       background-repeat: no-repeat;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
+    }
+
+    a {
+      color: $color-accent;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -46,7 +64,7 @@
 }
 
 .custom-checkbox__field:focus + .custom-checkbox__content::before {
-  outline: 2px solid #f00;
+  outline: 1px solid #fff;
   outline-offset: 2px;
 }
 

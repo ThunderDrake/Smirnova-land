@@ -1,3 +1,5 @@
 import "./components/event-slider"
 import "./components/video-button"
 import "./components/video-review-slider"
+import "./components/gallery-tabs"
+import "./components/callback-form"
