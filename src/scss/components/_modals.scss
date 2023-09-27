@@ -1,0 +1,65 @@
+.review-card__modal {
+  outline: 2px dashed #c6d02c;
+  outline-offset: -10px;
+  padding: 34px 42px;
+  font-family: var(--font-jost);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 110%; /* 19.8px */
+  letter-spacing: 0.72px;
+  color: #000;
+
+  &-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &-author {
+    margin-top: 98px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    max-width: 650px;
+
+    &-item {
+      font-family: var(--font-jost);
+      font-weight: 500;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: 0.72px;
+      color: #000;
+
+      span {
+        text-transform: uppercase;
+        color: $color-accent;
+      }
+    }
+  }
+
+  &-name {
+    margin-bottom: 15px;
+    font-family: var(--font-jost);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 120%; /* 30px */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #c6d02c;
+  }
+
+  &-role {
+    margin-bottom: 15px;
+    max-width: 510px;
+    font-family: var(--font-jost);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 110%; /* 19.8px */
+    letter-spacing: 0.72px;
+    color: #000;
+  }
+}
