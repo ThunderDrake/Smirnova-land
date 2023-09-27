@@ -90,9 +90,50 @@ const callbackFormRules = [
   },
 ];
 
+const eventFormRules = [
+  {
+    ruleSelector: '.event-callback__input--select',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Выберите событие'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.event-callback__input--name',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите имя'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.event-callback__input--phone',
+    tel: true,
+    telError: 'Введите корректный телефон',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+];
+
 validateForms('[data-form="callback"]', callbackFormRules)
+validateForms('[data-form="eventCallback"]', eventFormRules)
 
 const select = document.querySelector('.callback-form__input--select');
 const choices = new Choices(select, {
+  searchEnabled: false,
+});
+
+const eventCallbackSelect = document.querySelector('.event-callback__input--select');
+const eventChoices = new Choices(eventCallbackSelect, {
   searchEnabled: false,
 });

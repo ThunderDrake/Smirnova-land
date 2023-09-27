@@ -57,6 +57,9 @@
 
   &__content {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
   }
 
   &__image {

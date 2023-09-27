@@ -63,3 +63,221 @@
     color: #000;
   }
 }
+
+.event__modal {
+  outline: 2px dashed #c6d02c;
+  outline-offset: -10px;
+  padding: 48px 60px;
+  font-family: var(--font-jost);
+
+  &-title {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 120%; /* 42px */
+    letter-spacing: 1.4px;
+    color: #000;
+  }
+
+  &-date {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 120%; /* 42px */
+    letter-spacing: 1.4px;
+    color: $color-accent;
+  }
+
+  &-descr {
+    margin-bottom: 25px;
+    font-family: var(--font-jost);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 110%; /* 19.8px */
+    letter-spacing: 0.72px;
+    color: #000;
+  }
+
+  &-bold-text {
+    margin-bottom: 20px;
+    font-family: var(--font-jost);
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 110%; /* 26.4px */
+    letter-spacing: 0.96px;
+    color: #000;
+  }
+
+  &-list {
+    counter-reset: list-count;
+    padding-left: 20px;
+    font-family: var(--font-jost);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 110%; /* 19.8px */
+    letter-spacing: 0.72px;
+    color: #000;
+  }
+
+  &-item {
+    counter-increment: list-count;
+    position: relative;
+    margin-bottom: 20px;
+
+    &::before {
+      content: counter(list-count);
+      position: absolute;
+      left: -20px;
+      top: 0;
+      font-family: var(--font-jost);
+      font-weight: 700;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 110%; /* 19.8px */
+      letter-spacing: 0.72px;
+      color: #c6d02c;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &-button {
+    margin-top: 10px;
+    border-radius: 88px;
+    padding: 26px 46px;
+    font-family: var(--font-raleway);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.72px;
+    text-align: center;
+    color: #fff;
+    background-color: $color-accent;
+  }
+}
+
+.graph-modal__container--small {
+  padding: 55px 60px;
+  max-width: 500px;
+  background-color: #f3f7fa;
+}
+
+.event-callback {
+  &__title {
+    margin-bottom: 32px;
+    font-family: var(--font-jost);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 110%; /* 38.5px */
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #000;
+  }
+
+  &__choose-event {
+    margin-bottom: 13px;
+    padding-left: 25px;
+    font-family: var(--font-jost);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.64px;
+    color: #1c1c1c;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    .choices {
+      margin-bottom: 12px;
+    }
+
+    .choices__list--dropdown {
+      .choices__item {
+        padding-right: 30px;
+      }
+    }
+
+    .choices[data-type*="select-one"] .choices__inner {
+      border: none;
+      padding-bottom: 20px;
+    }
+
+    .choices__list--single {
+      overflow: hidden;
+      width: 90%;
+    }
+
+    .choices__list--single .choices__item {
+      width: 200%;
+    }
+  }
+
+  &__input {
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 113px;
+    padding: 20px 42px;
+    box-shadow: 0 0 21px 0 rgb(255 255 255 / 40%) inset;
+    font-family: var(--font-jost);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 135%;
+    letter-spacing: 0.54px;
+    color: #1c1c1c;
+    background: #fff;
+  }
+
+  &__submit {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    text-align: center;
+    color: #fff;
+
+    &:hover {
+      color: $color-main-bg;
+    }
+  }
+
+  &__checkbox {
+    font-family: var(--font-jost);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 135%;
+    letter-spacing: 0.42px;
+    text-align: center;
+    color: #1c1c1c;
+  }
+
+  .custom-checkbox {
+    @include custom-checkbox;
+
+    justify-content: center;
+  }
+}
+
+.event-callback .custom-checkbox__content {
+  padding-left: 0;
+  max-width: 230px;
+  color: #1c1c1c;
+}
+
+.event-callback .custom-checkbox__content::before,
+.event-callback .custom-checkbox__content::after {
+  left: 12%;
+  top: 50%;
+  transform: translateY(-50%);
+}
