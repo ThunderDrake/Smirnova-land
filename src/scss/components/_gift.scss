@@ -1,0 +1,59 @@
+.gift {
+  margin-bottom: 180px;
+
+  &__container {
+    position: relative;
+    background-image: url("../img/gift-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    padding: 110px 170px;
+    padding-right: 0;
+    padding-bottom: 100px;
+    max-width: 850px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1em;
+    font-family: var(--font-jost);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 125%;
+    color: #fff;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 88px;
+    padding: 40px 72px;
+    font-family: var(--font-jost);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 115%;
+    letter-spacing: 0.84px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(180deg, #c6d02c 0%, #bbc428 100%);
+
+    svg {
+      margin-left: 15px;
+    }
+
+    @include hover {
+      background: $color-accent;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 180px;
+    bottom: 70px;
+  }
+}
