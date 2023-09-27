@@ -1,12 +1,14 @@
 .footer {
   padding: 60px 0;
+  background-color: #020011;
 
   &__main {
     display: grid;
-    justify-content: space-between;
-    grid-template-columns: 200px 150px 150px 340px 280px;
+    justify-content: flex-start;
+    grid-template-columns: 170px 150px auto;
     border-bottom: 1px solid rgba(#fff, 0.35);
     padding-bottom: 75px;
+    gap: 135px;
   }
 
   &__logo {
@@ -30,8 +32,41 @@
 
     &-list {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
+      margin-right: -6px;
+      margin-left: -6px;
+    }
+
+    &-item {
+      margin-right: 6px;
+      margin-left: 6px;
+    }
+  }
+
+  &__contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: var(--font-jost);
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 0.8px;
+    color: #cacaca;
+    gap: 18px 82px;
+
+    &-title {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    &-text {
+      line-height: 140%; /* 28px */
+      letter-spacing: 0.8px;
     }
   }
 
