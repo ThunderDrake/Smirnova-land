@@ -9,15 +9,15 @@
   }
 
   &__text {
-    padding: 110px 170px;
+    padding: 90px 170px;
     padding-right: 0;
     padding-bottom: 100px;
-    max-width: 850px;
+    max-width: 950px;
   }
 
   &__title {
     margin: 0;
-    margin-bottom: 1em;
+    margin-bottom: 35px;
     font-family: var(--font-jost);
     font-weight: 700;
     font-style: normal;
@@ -31,7 +31,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 88px;
-    padding: 40px 72px;
+    padding: 30px 72px;
     font-family: var(--font-jost);
     font-weight: 700;
     font-style: normal;
@@ -54,6 +54,6 @@
   &__image {
     position: absolute;
     right: 180px;
-    bottom: 70px;
+    bottom: 0;
   }
 }
