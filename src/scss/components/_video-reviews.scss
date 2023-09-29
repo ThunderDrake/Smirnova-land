@@ -15,6 +15,20 @@
     span {
       color: $color-accent;
     }
+
+    @include tablet {
+      font-size: 50px;
+    }
+
+    @include small-tablet {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
   }
 
   &__slider {
@@ -27,6 +41,10 @@
     &-wrapper {
       position: relative;
       padding-bottom: 55px;
+
+      @include mobile {
+        padding-bottom: 30px;
+      }
     }
 
     &-button {
@@ -44,7 +62,15 @@
         right: 0;
         transform: translateY(-50%);
       }
+
+      @include mobile {
+        display: none;
+      }
     }
+  }
+
+  @include mobile {
+    margin-bottom: 60px;
   }
 }
 
@@ -53,7 +79,11 @@
   flex-direction: column;
 
   &__cover {
-    &-img {
+    &-image {
+      display: block;
+      margin: 0 auto;
+      border-radius: 35px;
+      height: 270px;
       object-fit: cover;
     }
   }
@@ -69,8 +99,18 @@
     width: 90px;
     height: 90px;
     background-color: $color-accent;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
     animation: pulse-animation 2s infinite;
+
+    @include small-tablet {
+      width: 45px;
+      height: 45px;
+
+      svg {
+        width: 13px;
+        height: 15px;
+      }
+    }
   }
 
   &__title {

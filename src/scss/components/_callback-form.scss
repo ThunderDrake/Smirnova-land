@@ -8,6 +8,19 @@
     background-image: url("../img/callback-form-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include tablet {
+      padding: 45px 55px;
+    }
+
+    @include small-tablet {
+      padding-bottom: 0;
+    }
+
+    @include mobile {
+      padding: 25px 30px;
+      padding-bottom: 0;
+    }
   }
 
   &__title {
@@ -23,6 +36,14 @@
     line-height: 115%; /* 58.65px */
     letter-spacing: 1.53px;
     color: #fff;
+
+    @include tablet {
+      font-size: 40px;
+    }
+
+    @include small-tablet {
+      font-size: 30px;
+    }
   }
 
   &__small-text {
@@ -45,9 +66,15 @@
     grid-template-columns: repeat(3, minmax(200px, 365px));
     margin-bottom: 18px;
     gap: 18px 24px;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__input {
+    border: none;
     border-radius: 113px;
     padding: 20px 42px;
     box-shadow: 0 0 21px 0 rgb(255 255 255 / 40%) inset;
@@ -78,6 +105,8 @@
   }
 
   &__socials {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     font-family: var(--font-jost);
@@ -100,6 +129,10 @@
 
     &-text {
       margin-right: 15px;
+
+      @include mobile {
+        font-size: 16px;
+      }
     }
   }
 
@@ -113,6 +146,19 @@
     bottom: 0;
     z-index: 0;
     pointer-events: none;
+
+    @include tablet {
+      width: 55%;
+    }
+
+    @include small-tablet {
+      position: static;
+      width: 100%;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 60px;
   }
 }
 
@@ -132,6 +178,11 @@
     letter-spacing: 0.54px;
     color: #1c1c1c;
     background: #fff;
+
+    @include small-tablet {
+      padding-top: 20px;
+      padding-bottom: 20px !important;
+    }
   }
 }
 
@@ -164,4 +215,14 @@
 
 .choices[data-type*="select-one"].is-open::after {
   transform: rotate(180deg);
+}
+
+.choices__list--single {
+  @include tablet {
+    padding-top: 14px;
+  }
+
+  @include small-tablet {
+    padding-top: 4px;
+  }
 }

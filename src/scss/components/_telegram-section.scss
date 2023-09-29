@@ -7,12 +7,22 @@
     background-image: url("../img/telegram-section-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   &__image {
     position: absolute;
     left: 10%;
     bottom: 0;
+
+    @include tablet {
+      position: static;
+      margin: 0 auto;
+    }
   }
 
   &__content {
@@ -21,6 +31,20 @@
     padding: 80px 72px;
     padding-left: 0;
     max-width: 800px;
+
+    @include tablet {
+      padding-left: 72px;
+      max-width: none;
+      text-align: center;
+    }
+
+    @include small-tablet {
+      padding: 60px 55px;
+    }
+
+    @include mobile {
+      padding: 30px 10px;
+    }
   }
 
   &__title {
@@ -37,6 +61,18 @@
     span {
       color: $color-accent;
     }
+
+    @include tablet {
+      font-size: 50px;
+    }
+
+    @include small-tablet {
+      font-size: 40px;
+    }
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   &__text {
@@ -48,6 +84,19 @@
     line-height: 130%; /* 52px */
     letter-spacing: 1.6px;
     color: #0d083f;
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 15px;
+    }
   }
 
   &__button {
@@ -73,5 +122,19 @@
     &:hover {
       background-color: #130891;
     }
+
+    @include small-tablet {
+      padding: 25px 50px;
+      font-size: 16px;
+
+      svg {
+        width: 30px;
+        height: 18px;
+      }
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 60px;
   }
 }

@@ -16,12 +16,43 @@
     span {
       color: $color-accent;
     }
+
+    @include tablet {
+      font-size: 50px;
+    }
+
+    @include small-tablet {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 35px;
+
+    @include big-desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet {
+      justify-content: center;
+      grid-template-columns: none;
+    }
+  }
+
+  @include tablet {
+    padding-bottom: 120px;
+  }
+
+  @include mobile {
+    padding-bottom: 50px;
   }
 }
 
@@ -42,6 +73,11 @@
     text-align: center;
     text-transform: uppercase;
     color: #090629;
+
+    @include mobile {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
   }
 
   &__text {
@@ -52,6 +88,10 @@
     line-height: 145%;
     text-align: center;
     color: #090629;
+
+    @include mobile {
+      font-size: 10px;
+    }
   }
 
   &:nth-child(1) {
@@ -64,5 +104,14 @@
 
   &:nth-child(3) {
     background-image: url("../img/system-card-3.png");
+  }
+
+  @include tablet {
+    max-width: 500px;
+  }
+
+  @include mobile {
+    padding: 45px 52px 270px;
+    max-width: 280px;
   }
 }

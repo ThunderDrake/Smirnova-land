@@ -9,6 +9,18 @@
     border-bottom: 1px solid rgba(#fff, 0.35);
     padding-bottom: 75px;
     gap: 135px;
+
+    @include tablet {
+      grid-template-columns: 170px auto;
+    }
+
+    @include mobile {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px;
+      gap: 0;
+    }
   }
 
   &__logo {
@@ -16,6 +28,16 @@
     margin-bottom: 75px;
     border-bottom: 1px solid rgba(#fff, 0.35);
     padding-bottom: 85px;
+
+    @include mobile {
+      margin-bottom: 340px;
+      border: none;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
   }
 
   &__socials {
@@ -37,11 +59,19 @@
       justify-content: flex-start;
       margin-right: -6px;
       margin-left: -6px;
+
+      @include mobile {
+        justify-content: center;
+      }
     }
 
     &-item {
       margin-right: 6px;
       margin-left: 6px;
+    }
+
+    @include mobile {
+      text-align: center;
     }
   }
 
@@ -68,6 +98,19 @@
       line-height: 140%; /* 28px */
       letter-spacing: 0.8px;
     }
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      display: block;
+
+      &-item {
+        margin-bottom: 25px;
+        text-align: center;
+      }
+    }
   }
 
   &__col {
@@ -77,6 +120,24 @@
       font-weight: 700;
       font-size: 20px;
       letter-spacing: 0.6px;
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+
+    &:nth-child(2) {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &:nth-child(3) {
+      @include mobile {
+        position: absolute;
+        left: 0;
+        top: 65px;
+      }
     }
   }
 
@@ -127,6 +188,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding-top: 10px;
+
+    @include mobile {
+      grid-template-columns: none;
+    }
   }
 
   &__rights {
@@ -135,6 +200,10 @@
     font-size: 13px;
     line-height: 185%;
     letter-spacing: 0.52px;
+
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &__copyrights {

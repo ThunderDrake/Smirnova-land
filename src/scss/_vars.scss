@@ -7,7 +7,7 @@
   --font-montserrat: "Montserrat", sans-serif;
   --content-width: 1570px;
   --content-fluid-width: 1775px;
-  --container-offset: 15px;
+  --container-offset: 22px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
   --swiper-pagination-bullet-inactive-color: #ececec;
@@ -16,6 +16,12 @@
   --swiper-pagination-bullet-width: 15px;
   --swiper-pagination-bullet-height: 15px;
   --swiper-pagination-bullet-horizontal-gap: 19px;
+
+  @media (max-width: 576px) {
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+  }
 }
 
 // Colors

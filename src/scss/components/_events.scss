@@ -15,6 +15,14 @@
     span {
       color: $color-accent;
     }
+
+    @include small-tablet {
+      font-size: 40px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   &__slider {
@@ -27,6 +35,10 @@
     &-wrapper {
       position: relative;
       padding-bottom: 55px;
+
+      @include mobile {
+        padding-bottom: 30px;
+      }
     }
 
     &-button {
@@ -44,7 +56,19 @@
         right: 0;
         transform: translateY(-50%);
       }
+
+      @include mobile {
+        display: none;
+      }
     }
+  }
+
+  @include tablet {
+    margin-bottom: 75px;
+  }
+
+  @include mobile {
+    margin-bottom: 50px;
   }
 }
 
@@ -54,12 +78,15 @@
   outline-offset: -10px;
   border-radius: 25px;
   padding: 38px 54px;
+  height: 670px;
+  box-sizing: border-box;
 
   &__content {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
+    height: 100%;
   }
 
   &__image {
@@ -81,6 +108,10 @@
     line-height: 120%;
     letter-spacing: 1px;
     color: #000;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__date {
@@ -92,9 +123,15 @@
     line-height: 120%;
     letter-spacing: 1px;
     color: #c6cf2c;
+
+    @include mobile {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
   }
 
   &__descr {
+    margin: 0;
     margin-bottom: 260px;
     font-family: var(--font-jost);
     font-weight: 500;
@@ -103,6 +140,11 @@
     line-height: 110%;
     letter-spacing: 0.64px;
     color: #000;
+
+    @include mobile {
+      margin-bottom: auto;
+      font-size: 10px;
+    }
   }
 
   &__link {
@@ -128,12 +170,22 @@
     }
 
     &:not(:last-child) {
+      margin-top: auto;
       margin-bottom: 14px;
+
+      @include mobile {
+        margin-bottom: 6px;
+      }
     }
 
     svg {
       margin-left: 10px;
       fill: currentcolor;
+    }
+
+    @include mobile {
+      padding-bottom: 3px;
+      font-size: 10px;
     }
 
     @include hover {
@@ -143,5 +195,9 @@
         border-color: $color-accent-light;
       }
     }
+  }
+
+  @include mobile {
+    height: 350px;
   }
 }

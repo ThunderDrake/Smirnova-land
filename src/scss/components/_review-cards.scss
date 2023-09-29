@@ -6,6 +6,25 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 34px;
+
+    @include big-desktop {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 100px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: none;
+      row-gap: 80px;
+    }
+
+    @include mobile {
+      row-gap: 45px;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 60px;
+    padding-top: 30px;
   }
 }
 
@@ -25,6 +44,27 @@
     height: 325px;
     object-fit: contain;
     object-position: left;
+
+    @include small-tablet {
+      width: 200px;
+      height: auto;
+    }
+
+    @include mobile {
+      width: 140px;
+    }
+  }
+
+  &__content {
+    @include small-tablet {
+      margin-right: 0;
+      margin-left: auto;
+      max-width: 60%;
+    }
+
+    @include mobile {
+      max-width: 50%;
+    }
   }
 
   &__text {
@@ -34,6 +74,11 @@
     line-height: 110%;
     letter-spacing: 0.88px;
     color: #080627;
+
+    @include mobile {
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
   }
 
   &__name {
@@ -44,6 +89,11 @@
     line-height: 110%;
     letter-spacing: 0.695px;
     color: #080627;
+
+    @include mobile {
+      margin-bottom: 6px;
+      font-size: 10px;
+    }
   }
 
   &__link {
@@ -55,8 +105,32 @@
     color: #c6d02c;
     transition: color 0.3s ease;
 
+    @include mobile {
+      font-size: 10px;
+    }
+
     @include hover {
       color: $color-main-bg;
     }
+  }
+
+  &:last-child {
+    @include big-desktop {
+      grid-column: span 2;
+    }
+
+    @include small-tablet {
+      grid-column: auto;
+    }
+  }
+
+  @include small-tablet {
+    padding: 28px 32px;
+    padding-left: auto;
+  }
+
+  @include mobile {
+    padding: 20px 24px;
+    padding-left: auto;
   }
 }

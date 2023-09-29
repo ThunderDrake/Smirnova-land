@@ -17,12 +17,44 @@
     span {
       color: $color-accent;
     }
+
+    @include tablet {
+      font-size: 50px;
+    }
+
+    @include small-tablet {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 35px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: none;
+    }
+  }
+
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  @include mobile {
+    padding-top: 70px;
+    padding-bottom: 80px;
   }
 }
 
@@ -62,6 +94,14 @@
     text-align: center;
     text-transform: uppercase;
     color: #020111;
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__text {
@@ -73,6 +113,10 @@
     line-height: 145%;
     text-align: center;
     color: #020111;
+
+    @include small-tablet {
+      font-size: 12px;
+    }
   }
 
   &:nth-child(1) {
@@ -97,5 +141,13 @@
 
   &:nth-child(6) {
     background-image: url("../img/problem-6.png");
+  }
+
+  @include small-tablet {
+    padding: 120px 40px 30px;
+  }
+
+  @include mobile {
+    padding: 100px 38px 20px;
   }
 }

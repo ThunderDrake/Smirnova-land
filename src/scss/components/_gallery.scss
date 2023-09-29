@@ -16,12 +16,38 @@
     span {
       color: $color-accent;
     }
+
+    @include tablet {
+      font-size: 50px;
+    }
+
+    @include small-tablet {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 35px 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: none;
+    }
   }
 
   &__item {
@@ -31,6 +57,11 @@
     img {
       border-radius: 25px;
     }
+  }
+
+  @include mobile {
+    padding-top: 50px;
+    padding-bottom: 80px;
   }
 }
 
@@ -47,7 +78,7 @@
       align-items: center;
       justify-content: center;
       border-radius: 500px;
-      padding: 28px 10px;
+      padding: 28px 40px;
       width: 100%;
       font-family: var(--font-raleway);
       font-weight: 500;
@@ -66,7 +97,7 @@
     }
 
     &-item {
-      width: 100%;
+      flex-shrink: 0;
     }
   }
 }

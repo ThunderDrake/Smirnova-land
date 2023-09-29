@@ -14,6 +14,10 @@
     position: absolute;
     left: 0;
     bottom: 0;
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &-author {
@@ -36,6 +40,10 @@
         text-transform: uppercase;
         color: $color-accent;
       }
+    }
+
+    @include tablet {
+      max-width: 530px;
     }
   }
 
@@ -167,6 +175,10 @@
   padding: 55px 60px;
   max-width: 500px;
   background-color: #f3f7fa;
+
+  @include small-tablet {
+    padding: 35px 40px;
+  }
 }
 
 .event-callback {
@@ -280,4 +292,8 @@
   left: 12%;
   top: 50%;
   transform: translateY(-50%);
+
+  @include small-tablet {
+    left: 0;
+  }
 }

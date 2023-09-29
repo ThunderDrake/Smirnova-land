@@ -6,6 +6,11 @@
     background-image: url("../img/gift-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include tablet {
+      overflow: hidden;
+      border-radius: 35px;
+    }
   }
 
   &__text {
@@ -13,6 +18,15 @@
     padding-right: 0;
     padding-bottom: 100px;
     max-width: 950px;
+
+    @include tablet {
+      padding: 70px 100px;
+      max-width: none;
+    }
+
+    @include small-tablet {
+      padding: 40px 50px;
+    }
   }
 
   &__title {
@@ -24,6 +38,15 @@
     font-size: 60px;
     line-height: 125%;
     color: #fff;
+
+    @include small-tablet {
+      font-size: 35px;
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   &__button {
@@ -49,11 +72,40 @@
     @include hover {
       background: $color-accent;
     }
+
+    @include small-tablet {
+      display: flex;
+    }
+
+    @include mobile {
+      padding: 20px;
+      font-size: 14px;
+
+      svg {
+        width: 15px;
+        height: 13px;
+      }
+    }
   }
 
   &__image {
     position: absolute;
     right: 180px;
     bottom: 0;
+
+    @include tablet {
+      position: static;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: -40%;
+    }
+
+    @include mobile {
+      margin-bottom: -70%;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 60px;
   }
 }
