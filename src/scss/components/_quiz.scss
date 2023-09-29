@@ -1,0 +1,108 @@
+.quiz {
+  padding-top: 100px;
+  padding-bottom: 120px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-family: var(--font-jost);
+    font-weight: 600;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 130%;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+
+    span {
+      color: $color-accent;
+    }
+
+    @include tablet {
+      font-size: 50px;
+    }
+
+    @include small-tablet {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    max-width: 1260px;
+    font-family: var(--font-jost);
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 130%;
+    text-align: center;
+    color: #fff;
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    @include mobile {
+      margin-bottom: 25px;
+      font-size: 15px;
+    }
+  }
+
+  &__gift {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1260px;
+    font-family: var(--font-jost);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 130%; /* 52px */
+    color: #fff;
+
+    &-text {
+      margin-left: -60px;
+
+      @include small-tablet {
+        margin-left: -40px;
+        padding-right: 40px;
+      }
+
+      @include mobile {
+        margin-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &-image {
+      @include small-tablet {
+        width: 300px;
+      }
+
+      @include mobile {
+        width: 150px;
+      }
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+  }
+
+  @include mobile {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
