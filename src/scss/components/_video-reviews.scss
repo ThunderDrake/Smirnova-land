@@ -83,8 +83,12 @@
       display: block;
       margin: 0 auto;
       border-radius: 35px;
-      height: 270px;
+      height: auto;
       object-fit: cover;
+
+      @include small-tablet {
+        height: 270px;
+      }
     }
   }
 
