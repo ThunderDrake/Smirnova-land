@@ -56,6 +56,11 @@
 
     img {
       border-radius: 25px;
+
+      @include mobile {
+        border-radius: 35px;
+        width: 100%;
+      }
     }
   }
 
@@ -79,7 +84,7 @@
       justify-content: center;
       border-radius: 500px;
       padding: 28px 40px;
-      width: 100%;
+      width: 240px;
       font-family: var(--font-raleway);
       font-weight: 500;
       font-style: normal;

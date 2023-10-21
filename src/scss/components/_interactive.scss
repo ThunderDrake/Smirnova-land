@@ -56,7 +56,8 @@
     align-items: flex-start;
     border-radius: 25px;
     padding: 42px;
-    min-height: 610px;
+    min-height: 680px;
+    background-position: bottom;
     background-color: $color-main-bg;
 
     &-number {
@@ -117,7 +118,7 @@
 
     @include mobile {
       padding: 24px 32px;
-      min-height: 340px;
+      min-height: 380px;
       max-width: 275px;
     }
   }

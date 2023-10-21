@@ -93,6 +93,10 @@
     right: 180px;
     bottom: 0;
 
+    @include big-desktop {
+      right: 5%;
+    }
+
     @include tablet {
       position: static;
       display: block;

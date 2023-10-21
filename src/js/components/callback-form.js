@@ -2,7 +2,7 @@ import JustValidate from 'just-validate';
 import Inputmask from "inputmask";
 import Choices from 'choices.js';
 
-export const validateForms = (selector, rules, afterSend) => {
+const validateForms = (selector, rules, url, nonce, action, afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
 
@@ -43,6 +43,8 @@ export const validateForms = (selector, rules, afterSend) => {
 
   validation.onSuccess((ev) => {
     let formData = new FormData(ev.target);
+    formData.append('action', action);
+    formData.append('nonce', nonce);
 
     let xhr = new XMLHttpRequest();
 
@@ -50,14 +52,16 @@ export const validateForms = (selector, rules, afterSend) => {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
           if (afterSend) {
-            afterSend();
+            form.querySelector('.form__button').insertAdjacentHTML('afterend', `<p class="form-success">Спасибо за заявку! Мы скоро с вами свяжемся</p>`)
           }
           console.log('Отправлено');
+        } else {
+          form.querySelector('.form__button').insertAdjacentHTML('afterend', `<p class="just-validate-error-label">Что-то пошло не так!</p>`)
         }
       }
     }
 
-    xhr.open('POST', 'mail.php', true);
+    xhr.open('POST', url, true);
     xhr.send(formData);
 
     ev.target.reset();
@@ -125,8 +129,18 @@ const eventFormRules = [
   },
 ];
 
-validateForms('[data-form="callback"]', callbackFormRules)
-validateForms('[data-form="eventCallback"]', eventFormRules)
+const afterForm = () => {
+  modal.close();
+
+  modal.open('thanks');
+
+  setTimeout(()=>{
+    modal.close();
+  }, 7000)
+};
+
+validateForms('[data-form="callback"]', callbackFormRules, form_object.url, form_object.nonce, 'form_action', afterForm)
+validateForms('[data-form="eventCallback"]', eventFormRules, form_object.url, form_object.nonce, 'form_action', afterForm)
 
 const select = document.querySelector('.callback-form__input--select');
 const choices = new Choices(select, {

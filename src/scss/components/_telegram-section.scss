@@ -19,6 +19,10 @@
     left: 10%;
     bottom: 0;
 
+    @include big-desktop {
+      left: 0;
+    }
+
     @include tablet {
       position: static;
       margin: 0 auto;
