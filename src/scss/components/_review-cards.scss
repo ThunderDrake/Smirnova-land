@@ -126,11 +126,11 @@
 
   @include small-tablet {
     padding: 28px 32px;
-    padding-left: auto;
+    padding-left: initial;
   }
 
   @include mobile {
     padding: 20px 24px;
-    padding-left: auto;
+    padding-left: initial;
   }
 }
